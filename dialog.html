@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>默认的留白</title>
+    <style>
+    .send {
+        position: relative;
+        width: 150px;
+        height: 35px;
+        background: #F8C301;
+        border-radius: 5px;
+        /* 圆角 */
+        margin: 30px auto 0;
+    }
+
+    .send .arrow {
+        position: absolute;
+        top: 5px;
+        right: -16px;
+        /* 圆角的位置需要细心调试哦 */
+        width: 0;
+        height: 0;
+        font-size: 0;
+        border: solid 9px;
+        border-color: white white white #F8C301;
+    }
+
+    .out-box {
+        background-color: white;
+        padding: 10px;
+        margin: 30px;
+    }
+
+    .out-box .send1 {
+        position: relative;
+        width: 150px;
+        height: 35px;
+        min-height:140px;
+        border:1px solid #808080;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: -5px 5px 5px #888888;
+        /* 圆角 */
+        margin: auto;
+        content: " ";
+        text-align:center;
+    }
+
+    .out-box .send1:after,
+    .out-box .send1:before {
+        bottom:100%;
+        left:50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        pointer-events: none;
+        position: absolute;
+        pointer-events:none;
+    }
+
+    .out-box .send1:before {
+        border-color: rgba(0, 0, 0, 0);
+        border-bottom-color: black;
+        border-width: 10px;
+        margin-left: -11px;
+    }
+
+    .out-box .send1:after {
+        border-color: rgba(128, 128, 128, 0);
+        border-bottom-color: #FFFFFF;
+        border-width: 9px;
+        margin-left: -10.5px;
+    }
+
+
+
+    .out-box .send1 .arrow1 {
+        position: absolute;
+        top: -18px;
+        right: 68px;
+        width: 0;
+        height: 0;
+        /*        font-size: 0;
+        border-style:solid solid solid solid;
+        border-width: 9px;
+        border-color: blue red white green;*/
+    }
+    </style>
+</head>
+
+<body>
+    <div class="send">
+        <div class="arrow"></div>
+    </div>
+    <div class="out-box">
+        <div class="send1">
+
+        </div>
+
+    </div>
+</body>
+
+</html>

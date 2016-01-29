@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>水平居中</title>
+    <style>
+        div{
+            border:1px solid #DADACE;
+            width:300px;
+        }
+        .center{
+            background-color:yellow;
+            width:200px;
+        }
+
+        div[name=center_div]{
+            margin:auto;
+        }
+        div[name=center_txt]{
+            margin:auto;
+            text-align:center;
+        }
+        p[name=center_p]{
+            margin:auto;
+            text-align:center;
+        }
+        table[name=center_table],tr,th{
+            margin:auto;
+            border:1px solid green;
+        }
+        span{
+            display:block;
+            margin:auto;
+            text-align:center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+    <div class="center" name="center_div">水平居中的div</div>
+    <div class="center" name="center_txt">水平居中的div,里面的文字也是水平居中</div>
+    <p class="center" name="center_p">水平居中的段落</p>
+    <table class="center" name="center_table"><tr><th>姓名</th><th>学号</th></tr></table>
+    <span class="center">水平居中的行内元素</span>
+    </div>
+</body>
+
+</html>

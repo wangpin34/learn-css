@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>元素定位</title>
+<style>
+
+body{
+    margin:0;
+}
+
+div{
+    background-color:#DADACE;
+}
+
+#test-relative{
+    min-height:100px;
+    width:300px;
+}
+
+#test-relative [name=d0]{
+    position:relative;
+    top:0;
+    left:1%;
+}
+
+#test-absolute{
+    min-height:100px;
+    width:300px;
+}
+
+
+#test-absolute [name=d0]{
+    position: absolute;
+    top:0;
+    left:0;
+    background-color:red;
+    word-wrap: break-word;
+}
+
+
+
+#d1{
+    width:100px;
+    height:100px;
+    position:fixed;
+    top:10px;
+    right:50%;
+    background:yellow;
+}
+</style>
+</head>
+<body>
+<div>
+用于占位的div
+</div>
+<hr/>
+<div id="test-relative">
+<div name="d0">
+相对定位的元素相对于自己原始位置定位。
+</div>
+<div>
+用于占位的div
+</div>
+</div>
+<hr/>
+<div id="test-absolute">
+<div name="d0">
+绝对定位的元素相对于已定位的父元素定位
+</div>
+<div>
+用于占位的div
+</div>
+</div>
+<hr/>
+<div id="d1">
+fixed div,相对于body定位
+</div>
+</body>
+</html>

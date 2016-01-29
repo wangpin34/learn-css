@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>垂直居中</title>
+    <style>
+    div {
+        border: 1px solid #DADACE;
+        width: 300px;
+        height: 200px;
+    }
+
+    .middle {
+        background-color: #DADACE;
+        width: 200px;
+        height: 50px;
+        margin: 30px 0;
+    }
+
+    .middle.txt {
+        line-height: 50px;
+        text-align: center;
+    }
+
+    .middle.img {
+        line-height: 300px;
+        height: 300px;
+        text-align: center;
+        /*图片水平居中*/
+    }
+
+    .middle.img img {
+        width: 80%;
+        vertical-align: middle;
+    }
+
+    .middle.table {}
+
+    .middle.table .child {
+        background-color: inherit;
+        margin: auto;
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    #parent {
+        position: relative;
+        background-color: #DADACE;
+    }
+
+    #child {
+        position: absolute;
+        background-color: grey;
+        top: 50%;
+        left: 50%;
+        height: 30%;
+        width: 50%;
+        margin: -10% 0 0 -25%;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="middle txt">
+        垂直居中的div
+    </div>
+    <div class="middle img">
+        <img src="img/a.gif" />
+    </div>
+    <div class="middle table">
+        <div class="child">Content here</div>
+    </div>
+    <div id="parent" style="margin-top:200px;">
+        <div id="child">Content here</div>
+    </div>
+</body>
+
+</html>
