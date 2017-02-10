@@ -8,3 +8,4 @@ css 学习
 * [垂直居中](https://cdn.rawgit.com/wangpin34/learn-css/master/middle.html)
 * [定位](https://cdn.rawgit.com/wangpin34/learn-css/master/position.html)
 * [尺寸](https://cdn.rawgit.com/wangpin34/learn-css/master/width-height.html)
+* [模态窗口](https://cdn.rawgit.com/wangpin34/learn-css/master/modal-window.html)
