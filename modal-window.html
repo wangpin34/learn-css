@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>模态窗口</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
 
     html {
@@ -50,24 +51,34 @@
         background-color: #ffffff;
     }
 
-    div.modal-window .content h2 {
+    div.modal-window .content .header {
+        position: relative;
+        height: 50px;
+        line-height: 50px;
+        padding: 5px;
         background-color: grey;
+    }
+
+    div.modal-window .content .header h2 {
+        width: 90%;
+        height: 90%;
         margin: 0;
-        padding: 10px 10px;
+    }
+
+    div.modal-window .content .header i[name=close] {
+        position: absolute;
+        right: 0;
+        top: calc(50% - 15px);
+        font-size: 30px;
+        color: #ffffff;
+        cursor: pointer;
     }
 
     div.modal-window .content p {
         padding: 10px 15px;
     }
 
-    div.modal-window .content .icon.close {
-        cursor: pointer;
-        position: absolute;
-        top: 0;
-        right: 0;
-        color: #ffffff;
-        font-size: 30px;
-    }
+
 
     </style>
 </head>
@@ -78,9 +89,11 @@
     </div>
 
     <div class="modal-window">
-        <div class="content">
-            <h2>Title</h2>
-            <span class="icon close">X</span>
+        <div class="content itemBox">
+            <div class="header">
+                <h2>Title</h2>
+                <i name="close" class="material-icons md-icon dp48">close</i>
+            </div>
             <p>Content here...</p>
         </div>
     </div>
@@ -98,7 +111,7 @@
              e.stopPropagation();
         });
 
-        document.querySelector('.modal-window .content .icon.close').addEventListener('click', function(e){
+        document.querySelector('.modal-window .content i').addEventListener('click', function(e){
             modalWindow.style.display = 'none';
         });
 
